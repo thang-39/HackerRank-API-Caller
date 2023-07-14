@@ -30,21 +30,6 @@ public class GetMostActiveUsers {
 //                System.out.println(totalPages);
                 List<String> userTitles = getUserTitles(response, user);
                 int count = 0;
-
-                int index = 0;
-                while(index != -1){
-                    index = response.indexOf(subCount, index);
-                    if (index != -1) {
-                        int cc = response.indexOf(",",index);
-                        currentUserData = Integer.parseInt(response.substring(index + subCount.length() + 2, cc));
-                        if (currentUserData >= threshold){
-                            result.add(userTitles.get(count));
-                        }
-                        index++;
-                        count++;
-                    }
-                }
-
             }
             in.close();
             startPage++;
