@@ -95,4 +95,6 @@ public class TotalGoalsByATeam {
         return totalGoalsHome;
     }
 
+
 }
+
